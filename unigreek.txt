@@ -1,0 +1,111 @@
+1   Α α – Alfa
+        Velké: U+0391
+        Malé: U+03B1
+
+2   Β β – Beta
+        Velké: U+0392
+        Malé: U+03B2
+
+3   Γ γ – Gama
+        Velké: U+0393
+        Malé: U+03B3
+
+4   Δ δ – Delta
+        Velké: U+0394
+        Malé: U+03B4
+
+5   Ε ε – Epsilon
+        Velké: U+0395
+        Malé: U+03B5
+
+6  Ζ ζ – Zéta
+        Velké: U+0396
+        Malé: U+03B6
+
+7   Η η – Éta
+        Velké: U+0397
+        Malé: U+03B7
+
+8   Θ θ – Théta
+        Velké: U+0398
+        Malé: U+03B8
+
+9   Ι ι – Jota
+        Velké: U+0399
+        Malé: U+03B9
+
+10    Κ κ – Kappa
+
+    Velké: U+039A
+    Malé: U+03BA
+
+11    Λ λ – Lambda
+
+    Velké: U+039B
+    Malé: U+03BB
+
+12    Μ μ – Mý
+
+    Velké: U+039C
+    Malé: U+03BC
+
+13    Ν ν – Ný
+
+    Velké: U+039D
+    Malé: U+03BD
+
+14    Ξ ξ – Xí
+
+    Velké: U+039E
+    Malé: U+03BE
+
+15    Ο ο – Omikron
+
+    Velké: U+039F
+    Malé: U+03BF
+
+16    Π π – Pí
+
+    Velké: U+03A0
+    Malé: U+03C0
+
+17    Ρ ρ – Ró
+
+    Velké: U+03A1
+    Malé: U+03C1
+
+18    Σ σ/ς – Sigma
+
+    Velké: U+03A3
+    Malé: U+03C3 (běžné), U+03C2 (koncové)
+
+19    Τ τ – Tau
+
+    Velké: U+03A4
+    Malé: U+03C4
+
+20    Υ υ – Ypsilon
+
+    Velké: U+03A5
+    Malé: U+03C5
+
+21    Φ φ – Fí
+
+    Velké: U+03A6
+    Malé: U+03C6
+
+22    Χ χ – Chí
+
+    Velké: U+03A7
+    Malé: U+03C7
+
+23    Ψ ψ – Psí
+
+    Velké: U+03A8
+    Malé: U+03C8
+
+24    Ω ω – Ómega
+
+    Velké: U+03A9
+    Malé: U+03C9
+
