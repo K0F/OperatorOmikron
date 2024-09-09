@@ -1,12 +1,19 @@
   # Welcome to Kof's abstract math crash course!
 
+## Greekset
 
+It uses 24 letters of Greek alphabet representing numbers from 1..24
+
+where `A = 1, B = 2, C = 3 and D = 4`
+
+
+
+## Special Operator = Omicron
 
 Operator Omicron stands for variable in mathematical operator symbol.
 
 Omicron can be either "+", "−", "×", "÷" ...etc. so the variable is operation itself... and it prints out in all combinatorics something as following:
 
-If A = 1, B = 2, C = 3 and D = 4
 
 o = any operation:
 
