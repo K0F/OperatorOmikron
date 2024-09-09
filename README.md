@@ -2,6 +2,9 @@ Operator Omicron stands for variable in mathematical operator stmbol.
 
 Omicron can be either "+", "−", "×", "÷" ...etc. so the variable is operation itself... and it prints out in all combinatorics something as following:
 
+If A = 1, B = 2, C = 3 and D = 4
+
+o = any operation:
 
 
 ```
