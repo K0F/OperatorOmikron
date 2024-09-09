@@ -85,3 +85,5 @@ a ÷ b ÷ c − d = -3.8333333
 a ÷ b ÷ c × d = 0.6666667
 a ÷ b ÷ c ÷ d = 0.041666668
 ```
+
+..please notice that, while having fun all numbers are still pretty, and so on
