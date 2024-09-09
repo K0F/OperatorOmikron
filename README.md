@@ -1,6 +1,6 @@
 Operator Omicron stands for variable in mathematical expression. Omicron can be either "+", "−", "×", "÷" ...etc. and it prints out something following.
 
-
+```
 a + b + c + d = 10.0
 a + b + c − d = 2.0
 a + b + c × d = 24.0
@@ -58,6 +58,7 @@ a ÷ b − c − d = -6.5
 a ÷ b − c × d = -10.0
 a ÷ b − c ÷ d = -0.625
 a ÷ b × c + d = 5.5
+```
 a ÷ b × c − d = -2.5
 a ÷ b × c × d = 6.0
 a ÷ b × c ÷ d = 0.375
