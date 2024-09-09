@@ -8,11 +8,11 @@ where `A = 1, B = 2, Γ = 3 and Δ = 4`
 
 
 
-## Special Operator = Omicron (better symbol is to come)
+## Special Operator = Omicron (better symbol yet to come)
 
 Operator Omicron stands for variable in mathematical operator symbol.
 
-Omicron can be either "+", "−", "×", "÷" ...etc. so the variable is the operation itself:
+Omicron can be either "+", "−", "×", "÷" ...etc. the variable is for the operation itself:
 
 o = any operation:
 
