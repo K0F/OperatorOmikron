@@ -1,4 +1,4 @@
-Operator Omicron stands for variable in mathematical operator stmbol.
+Operator Omicron stands for variable in mathematical operator symbol.
 
 Omicron can be either "+", "−", "×", "÷" ...etc. so the variable is operation itself... and it prints out in all combinatorics something as following:
 
