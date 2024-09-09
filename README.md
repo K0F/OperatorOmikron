@@ -1,4 +1,8 @@
-Operator Omicron stands for variable in mathematical expression. Omicron can be either "+", "−", "×", "÷" ...etc. and it prints out something following.
+Operator Omicron stands for variable in mathematical operator stmbol.
+
+Omicron can be either "+", "−", "×", "÷" ...etc. so the variable is operation itself... and it prints out in all combinatorics something as following:
+
+
 
 ```
 a + b + c + d = 10.0
@@ -58,7 +62,6 @@ a ÷ b − c − d = -6.5
 a ÷ b − c × d = -10.0
 a ÷ b − c ÷ d = -0.625
 a ÷ b × c + d = 5.5
-```
 a ÷ b × c − d = -2.5
 a ÷ b × c × d = 6.0
 a ÷ b × c ÷ d = 0.375
@@ -66,3 +69,4 @@ a ÷ b ÷ c + d = 4.1666665
 a ÷ b ÷ c − d = -3.8333333
 a ÷ b ÷ c × d = 0.6666667
 a ÷ b ÷ c ÷ d = 0.041666668
+```
