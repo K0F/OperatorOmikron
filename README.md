@@ -19,7 +19,9 @@ o = any operation:
 
 
 ```
-a + b + c + d = 10.0
+aοbοcοd = ...
+
+a + b + c + d = 10.0 
 a + b + c − d = 2.0
 a + b + c × d = 24.0
 a + b + c ÷ d = 1.5
