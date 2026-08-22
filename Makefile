@@ -3,6 +3,7 @@ CFLAGS  ?= -std=c11 -O2 -Wall -Wextra
 LDLIBS  ?= -lm
 BUILD   := build
 BIN     := $(BUILD)/omicron
+KOF     := $(BUILD)/kofsum
 SRC     := src/main.c
 
 .PHONY: all build test clean
@@ -10,11 +11,15 @@ SRC     := src/main.c
 
 all: build
 
-build: $(BIN)
+build: $(BIN) $(KOF)
 
 $(BIN): $(SRC)
 	@mkdir -p $(BUILD)
 	$(CC) $(CFLAGS) -o $@ $< $(LDLIBS)
+
+$(KOF): src/kofsum.c
+	@mkdir -p $(BUILD)
+	$(CC) $(CFLAGS) -o $@ $<
 
 test: build
 	@set -e; \
@@ -41,6 +46,11 @@ test: build
 	$(BIN) -n 4 --reverse 100 | grep -qF 'no expression found' || { echo 'FAIL: --reverse 100 should find nothing'; exit 1; }; \
 	if $(BIN) -n 4 --reverse abc >/dev/null 2>&1; then echo 'FAIL: invalid target accepted'; exit 1; fi; \
 	if $(BIN) bogus >/dev/null 2>&1; then echo 'FAIL: bad args accepted'; exit 1; fi; \
+	printf '' | $(KOF) | grep -qF 'cbf29ce484222325  -' || { echo 'FAIL: kofsum empty digest'; exit 1; }; \
+	printf 'hello' | $(KOF) | grep -qF 'a430d84680aabd0b  -' || { echo 'FAIL: kofsum hello digest'; exit 1; }; \
+	printf 'the quick brown fox jumps over the lazy dog' | $(KOF) | grep -qF '7404cea13ff89bb0  -' || { echo 'FAIL: kofsum sentence digest'; exit 1; }; \
+	[ "$$($(KOF) Makefile)" = "$$($(KOF) Makefile)" ] || { echo 'FAIL: kofsum not deterministic'; exit 1; }; \
+	if $(KOF) /nonexistent-kofsum-test >/dev/null 2>&1; then echo 'FAIL: kofsum accepted missing file'; exit 1; fi; \
 	echo 'All tests passed.'
 
 clean:

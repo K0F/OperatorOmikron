@@ -77,11 +77,26 @@ Use `--limit K` (default 1000) to cap the number of matches reported.
 
 
 
+## kofsum
+
+A fast, non-cryptographic checksum in the spirit of `shasum`. Reads files or
+stdin and prints a fixed-width 64-bit FNV-1a digest per input — good for
+spotting changed content, not for standing up to adversaries:
+
+```
+$ ./build/kofsum README.md
+$ printf 'hello' | ./build/kofsum
+a430d84680aabd0b  -
+```
+
+
+
 ## Build & run
 
 ```
-make            # builds build/omicron
+make            # builds build/omicron and build/kofsum
 make test       # runs self-checks
 ./build/omicron -n 4            # enumerate all a..d expressions
 ./build/omicron --reverse 24    # find a..z expressions equal to 24
+./build/kofsum README.md        # checksum a file
 ```
