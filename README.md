@@ -26,38 +26,52 @@ aοbοcοd = ...
 
 ## What the program does
 
-`omicron` takes the first four Greek numerals — `Α = 1`, `Β = 2`, `Γ = 3`, `Δ = 4` —
+`omicron` takes the first N numerals — `a = 1`, `b = 2`, ..., up to `z = 26` —
 and substitutes every possible combination of Omicrons between them:
 
 ```
-a ο b ο c ο d
+a ο b ο ... ο z
 ```
 
-Since each of the three gaps holds one of four operations (`+ − × ÷`),
-there are exactly `4³ = 64` expressions, evaluated strictly left-to-right.
-For example:
+Each gap holds one of four operations (`+ − × ÷`), so N letters give
+`4^(N-1)` expressions, evaluated strictly left-to-right.
+For example, with `-n 4` there are exactly `4³ = 64` of them:
 
 ```
+$ ./build/omicron -n 4
 a + b + c + d = 10
-a + b × c ÷ d = 2.25
-a − b × c + d = 1
-a ÷ b ÷ c ÷ d = 0.04166667
+a + b + c − d = 2
+a + b + c × d = 24
+...
 ```
 
-Run without arguments, the program prints all 64 of them.
+Run without arguments you get all 26 letters: `4²⁵ ≈ 1.1 quadrillion`
+expressions — too many to print, so the program says so instead and hints
+at `-n`, `--force` or reverse mode.
 
 ### Reverse mode
 
-Given a target number, omicron searches backwards through the whole space
-of expressions and reports every combination of operators that produces it:
+Given a target number, omicron searches through the whole space of
+expressions and reports every combination of operators that produces it.
+Interval pruning discards prefixes that can no longer reach the target,
+so even the full a..z space is searched in an instant:
 
 ```
-$ ./build/omicron --reverse 24
+$ ./build/omicron --reverse 24 -n 4
 a + b + c × d = 24
 a × b × c × d = 24
 ```
 
-If no expression yields the target, it says so.
+Use `--limit K` (default 1000) to cap the number of matches reported.
+
+### Options
+
+```
+-n N           use letters a..(a+N-1), 1..26; default: a..z
+--reverse R    list expressions that evaluate to R (left-to-right)
+--limit K      max matches reported in reverse mode; default 1000
+--force        allow printing more than one million expressions
+```
 
 
 
@@ -66,6 +80,6 @@ If no expression yields the target, it says so.
 ```
 make            # builds build/omicron
 make test       # runs self-checks
-./build/omicron                 # enumerate all 64 expressions
-./build/omicron --reverse 24    # find expressions equal to 24
+./build/omicron -n 4            # enumerate all a..d expressions
+./build/omicron --reverse 24    # find a..z expressions equal to 24
 ```
