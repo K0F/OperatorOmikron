@@ -1,5 +1,7 @@
 # Welcome to Kof's abstract math crash course!
 
+![Operator Omikron](OperatorOmikron_24.png)
+
 ## Greekset
 
 It uses 24 letters of Greek alphabet representing numbers from 1..24
