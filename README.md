@@ -2,11 +2,18 @@
 
 ![Operator Omikron](OperatorOmikron_24.png)
 
+Two small C tools live here: **omicron** plays every possible combination
+of operators between letter-numerals, **kofsum** is its quick checksum
+companion.
+
 ## Greekset
 
-It uses 24 letters of Greek alphabet representing numbers from 1..24
+Letters of an alphabet double as numerals from 1..N
 
 where `A = 1, B = 2, Γ = 3 and Δ = 4`
+
+The original Greekset had 24 letters, `Α..Ω` = 1..24;
+this implementation runs on the Latin alphabet, `a..z` = 1..26.
 
 
 
